@@ -1,0 +1,359 @@
+/* Common styles for all screen sizes */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Main{
+   display: flex;
+   flex-direction: column;
+   gap: 16px; 
+}
+
+.Menu{
+    width: 70%;
+    margin-left: 10%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #E9E9E9;
+
+    &_play-add-side{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &_search-filter-side{
+        display: flex;
+        justify-content: space-between;
+
+        &_filter-button{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px;
+            border: 1px solid #E9E9E9;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        &_Search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &_Icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & input{
+                border-radius: 20px;
+                padding: 10px;
+                background-color: #F5F5F5;
+                border-color: #E9E9E9;
+            }
+        }
+
+        
+
+    }
+
+}
+
+.first-side{
+    width: 100%;
+    display: flex;
+        flex-direction: row;
+    margin-left: 10%;
+    gap: 4px;
+    border: none;
+
+    & div{
+        background-color: #EEEEEE;
+        font-weight: bold;
+
+    }
+    
+}
+
+.second-side{
+    width: 100%;
+    margin-left: 10%;
+    gap: 4px;
+    border: none;
+}
+
+
+.song-row{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    border-bottom: 3px solid #EEEEEE;
+    background-color: #F5F5F5;
+}
+
+.play-pause, .songName, .artistName, .track, .rate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+    height: 40px;
+    color: #877074;
+}
+
+.play-pause{
+    width: 5%;
+    cursor: pointer;
+}
+
+.track{
+    width: 7%;
+}
+
+.rate{
+    width: 11%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+
+.playAll{
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    
+    &_button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid #E9E9E9;
+            padding: 10px;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+
+
+            &_arrow{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #E9E9E9;
+                background-color: #F5F5F5;
+                border-radius: 10px;
+            }
+
+    }
+
+}
+
+.AddAll{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            border: 1px solid #E9E9E9;
+            padding: 10px;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            cursor: pointer;
+}
+
+.List{
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.playAll_dropDown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    margin-top: 5px;
+    position: absolute;
+    width: 100%;
+
+
+    & div{
+        background-color: #F5F5F5;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover{
+            color: #F5F5F5;
+            background-color: black;
+        }
+    }
+}
+
+.filter_dropDown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    position: absolute;
+    margin-top: 5px;
+    right: 30;
+    width: 100%;
+
+    & div{
+        background-color: #F5F5F5;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover{
+            color: #F5F5F5;
+            background-color: black;
+        }
+    }
+}
+  
+  /* Responsive styles using media queries */
+  @media only screen and (max-width: 1200px) {
+    .Menu {
+      width: 100%;
+      margin-left: 0;
+      flex-direction: column;
+
+      &_play-add-side{
+        gap: 16px;
+
+        &_search-filter-side_Search{
+    
+                & input{
+                    width: 10px;
+                }
+            }
+    
+            
+    
+        }
+
+    }
+
+    .AddAll{
+        width: 50%;
+    }
+
+.playAll{
+    width: 100%;
+
+}
+
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .Menu,
+    .song-row {
+      width: 90%;
+      margin-left: 5%;
+      justify-content: flex-start;
+      gap: 4px;
+
+      .play-pause{
+        width: 8%;
+        
+       
+    }
+
+    .songName{
+        width: 30%;
+       
+    }
+
+    .artistName{
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .track{
+        width: 10%;
+        
+    }
+
+    .rate{
+        flex-direction: column;
+        align-items: flex-start;
+       
+    }
+
+    }
+  
+
+
+    .first-side{
+        font-size: 12px;
+      width: 100%;
+
+        .play-pause{
+            width: 8%;
+        }
+
+        .songName{
+            width: 30%;
+        }
+
+        .artistName{
+            width: 35%;
+        }
+
+        .track{
+            width: 10%;
+        }
+    }
+
+    .second-side{
+        font-size: 12px;
+        width: 100%;
+        margin-left: 10px;
+        gap: 0;
+        justify-content: flex-start;
+
+        
+    }
+  
+    .playAll,
+    .AddAll {
+      width: 100%;
+      margin-left: 10%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .Menu,
+    .song-row {
+      width: 100%;
+      margin-left: 2.5%;
+    }
+
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .Menu,
+    .song-row {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .first-side,
+    .second-side,
+    .playAll,
+    .AddAll {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
